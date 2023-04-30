@@ -1,9 +1,6 @@
-// import { useEffect } from 'react'
+
 import './App.css'
 import {Routes,Route ,BrowserRouter as Router} from 'react-router-dom'
-// import fetchData from './utils/api'
-// import { useDispatch,useSelector} from 'react-redux'
-// import { getURL } from './store/slices/homePage';
 import Navbar from './components/Navbar'
 import Error from './pages/404/Error'
 import Details from './pages/details/Details'
@@ -11,7 +8,25 @@ import Explore from './pages/explore/Explore'
 import HomePage from './pages/homepage/HomePage'
 import Searchresult from './pages/searchresult/Searchresult'
 import Footer from './components/Footer'
+import fetchData from './utils/api'
+import { useEffect } from 'react'
+import { useDispatch } from 'react-redux'
+import { getURL } from './store/slices/homePage'
 function App() {
+  const dispatch=useDispatch();
+  const getBasicAPIconfig=async()=>{
+    const response=await fetchData('/configuration');
+    const {images:{base_url,secure_base_url}}=response;
+    const url={
+      base_url,
+      secure_base_url,
+      size:"original"
+    }
+    dispatch(getURL({url}));
+  }
+  useEffect(()=>{
+    getBasicAPIconfig();
+  },[])
   return (
     <>
      <Router>

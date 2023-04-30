@@ -3,7 +3,9 @@ import { createSlice } from "@reduxjs/toolkit";
 const homeSlice=createSlice({
       name:"homepageSlice",
       initialState:{
-            url:{},
+            url:{
+             
+            },
             genres:{
             }
       },

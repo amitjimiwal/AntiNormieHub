@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-// import iconimg from '../../public/movix-logo.png'
+import iconimg from '../../public/movix-logo.png'
 const Navbar = () => {
   const [isMenuOpen,setisMenuOpen]=useState(false);
   const handleToggleMenu=()=>{
@@ -10,11 +10,11 @@ const Navbar = () => {
     <nav className="sticky w-full z-[100] bg-black">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <Link to="/" className="flex items-center">
-          {/* <img
+          <img
             src={iconimg}
             className="h-8 mr-3"
             alt="Flowbite Logo"
-          /> */}
+          />
           <span className="self-center xd:text-xl font-semibold whitespace-nowrap dark:text-white xsm:text-[1rem]">
             AntiNormieHub
           </span>

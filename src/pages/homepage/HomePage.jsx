@@ -5,7 +5,7 @@ const HomePage = () => {
   const {data}=useFetch('/movie/popular')
   // console.log(data);
   return (
-    <div>
+    <div className="w-full">
       <Banner/>
     </div>
   )

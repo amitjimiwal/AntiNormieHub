@@ -9,6 +9,7 @@ export default {
     screens: {
       'xsm': '250px',
       'xd':'600px',
+      'rs':'760px'
     }
   ,
   plugins: [],

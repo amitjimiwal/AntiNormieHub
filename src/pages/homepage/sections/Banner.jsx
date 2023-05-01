@@ -9,21 +9,24 @@ const Banner = () => {
   const navigate = useNavigate();
   const [backgroundImg, setBackgroundImg] = useState("");
   const [searchInput, setSearchInput] = useState("");
-  const { data, loading } = useFetch("/movie/upcoming");
+  const { data, loading } =useFetch("/movie/upcoming");
   const handlebackgroundImage = () => {
-    // get a random number to select random images for background
+    try{
+      // get a random number to select random images for background
     const randomNumber = Math.floor(
       Math.random() * (data?.results.length - 0 + 1) + 0
     );
     const randomMovieBackground = data?.results[randomNumber].backdrop_path;
     // console.log(secure_base_url+size+randomMovieBackground);
     setBackgroundImg(secure_base_url + size + randomMovieBackground);
+    }catch(error){
+      console.log(error);
+    }
   };
   useEffect(() => {
     handlebackgroundImage();
   }, [data]);
   // handle searchbutton
-  console.log(loading);
   const handleSearch = () => {
     if (searchInput) {
       navigate(`/search/${searchInput}`);
@@ -38,7 +41,7 @@ const Banner = () => {
   };
   return (
     <div className=" banner-section w-full h-[270px] rs:h=[700px] relative xsm:text-xl  bg-black ">
-      {!loading && (
+      {backgroundImg && (
         <div className="absolute top-0 z-[10000] w-full text-center mt-2">
           <h1 className="text-red-600 xd:text-4xl font-bold tracking-wide mb-2 xsm:text-2xl">
             AntiNormieHub
@@ -64,7 +67,7 @@ const Banner = () => {
         </div>
       )}
 
-      {!loading && (
+      {backgroundImg && (
         <div className="absolute top-0 h-full w-full object-center opacity-5">
           <img src={backgroundImg} className="w-full h-full object-cover" />
         </div>

@@ -9,7 +9,7 @@ const Banner = () => {
   const navigate = useNavigate();
   const [backgroundImg, setBackgroundImg] = useState("");
   const [searchInput, setSearchInput] = useState("");
-  const { data, loading } =useFetch("/movie/upcoming");
+  const { data} =useFetch("/movie/upcoming");
   const handlebackgroundImage = () => {
     try{
       // get a random number to select random images for background
@@ -68,7 +68,7 @@ const Banner = () => {
       )}
 
       {backgroundImg && (
-        <div className="absolute top-0 h-full w-full object-center opacity-5">
+        <div className="absolute top-0 h-full w-full object-center opacity-10">
           <img src={backgroundImg} className="w-full h-full object-cover" />
         </div>
       )}

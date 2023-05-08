@@ -1,12 +1,12 @@
 import useFetch from "../../hooks/useFetch"
 import Banner from "./sections/Banner"
+import Section from "./sections/Trending"
 
 const HomePage = () => {
-  const {data}=useFetch('/movie/popular')
-  // console.log(data);
   return (
     <div className="w-full">
       <Banner/>
+      <Section name='trending'/>
     </div>
   )
 }

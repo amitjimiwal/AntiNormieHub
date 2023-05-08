@@ -28,7 +28,7 @@ function App() {
     getBasicAPIconfig();
   },[])
   return (
-    <>
+    <div className='bg-black'>
      <Router>
      <Navbar/>
       <Routes>
@@ -40,7 +40,7 @@ function App() {
       </Routes>
       <Footer/>
      </Router>
-    </>
+    </div>
   )
 }
 

@@ -12,7 +12,7 @@ const Trending = ({name}) => {
         <div className="ml-auto mr-6">
           {/* you can make seperate button component for this*/}
           <button
-            className={`text-black font-bold py-2 px-4 transition-property:background-color focus:bg-white-500 rounded-s-xl duration-100 text-white ${
+            className={`text-black font-bold py-2 px-4 transition-property:background-color focus:bg-white-500 rounded-s-xl duration-100 ${
               selectedTab === "day" ? "bg-blue-500" : "bg-white"
             }`}
             onClick={() => {
@@ -22,7 +22,7 @@ const Trending = ({name}) => {
             Day
           </button>
           <button
-            className={`text-black font-bold py-2 px-4 transition-property:background-color focus:bg-white-500 duration-100 rounded-e-xl text-white ${
+            className={`text-black font-bold py-2 px-4 transition-property:background-color focus:bg-white-500 duration-100 rounded-e-xl ${
               selectedTab === "day" ? "bg-white" : "bg-blue-500"
             }`}
             onClick={() => {

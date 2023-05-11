@@ -5,7 +5,7 @@ const Moviecard = ({name,posterpath,rating}) => {
             (state) => state.homepageSlice.url
           );
   return (
-    <div className="w-[20%] h-auto p-2 m-2 flex flex-col">
+    <div className="w-[20%] min-w-[110px] h-auto p-2 m-2 flex flex-col">
        <div className='w-full'>
             <img src={posterpath? secure_base_url+size+posterpath:image} className='cover'/>
        </div>

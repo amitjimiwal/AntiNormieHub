@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import useFetch from "../../../hooks/useFetch";
-import { useSelector } from "react-redux";
+
+import { useSelector } from "react-redux";  
 const Banner = () => {
   const { secure_base_url, size } = useSelector(
     (state) => state.homepageSlice.url

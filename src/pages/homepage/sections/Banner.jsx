@@ -10,7 +10,7 @@ const Banner = () => {
   const navigate = useNavigate();
   const [backgroundImg, setBackgroundImg] = useState("");
   const [searchInput, setSearchInput] = useState("");
-  const { data} =useFetch("/movie/upcoming");
+  const {data} =useFetch("/movie/upcoming");
   const handlebackgroundImage = () => {
     try{
       // get a random number to select random images for background

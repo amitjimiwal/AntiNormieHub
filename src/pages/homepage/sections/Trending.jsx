@@ -40,6 +40,8 @@ const Trending = ({name}) => {
             name={item.title || item.name}
             posterpath={item.poster_path}
             rating={item.vote_average}
+            id={item.id}
+            showtype={item.media_type}
           />
         ))}
       </div>}

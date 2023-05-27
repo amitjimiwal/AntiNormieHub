@@ -1,7 +1,7 @@
 import image from "../../../assets/images/no-poster.png";
 import { useSelector } from "react-redux";
 const MovieInformation = ({data}) => {
-  const {overview,poster_path,genres,original_title,vote_average,tagline,homepage}=data;
+  const {overview,poster_path,genres,original_title,vote_average,tagline,homepage,title}=data;
   const { secure_base_url, size } = useSelector(
     (state) => state.homepageSlice.url
   );
@@ -14,7 +14,7 @@ const MovieInformation = ({data}) => {
         />
       </div>
       <div className="flex flex-col w-[60%]">
-        <h1 className="text-white font-bold text-2xl my-4">{original_title}</h1>
+        <h1 className="text-white font-bold text-2xl my-4">{original_title || title}</h1>
         <p className="font-serif text-slate-400 text-xl mb-4">{tagline}</p>
         <div className="genres mb-4 mt-3">
         {genres.map((item,index)=> 

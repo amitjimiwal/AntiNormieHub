@@ -23,7 +23,7 @@ const Searchresult = () => {
     fetchSearchData();
   }, [loading]);
   return (
-    <>
+    <div className="min-h-[100vh]">
     {loading? 
     <div className="lds-dual-ring w-full h-[80vh] flex justify-center items-center"></div>
     :
@@ -45,7 +45,7 @@ const Searchresult = () => {
       </>
     )
     }
-    </>
+    </div>
   );
 };
 

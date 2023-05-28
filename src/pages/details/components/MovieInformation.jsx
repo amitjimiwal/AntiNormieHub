@@ -6,14 +6,14 @@ const MovieInformation = ({data}) => {
     (state) => state.homepageSlice.url
   );
   return (
-    <div className="w-[100%%] h-auto flex gap-10 justify-center pt-8 z-10">
-      <div className="w-[30%] rounded-xl">
+    <div className="w-[100%%] h-auto flex gap-10 justify-center pt-8 z-10 xsm:flex-col xd:flex-row">
+      <div className="xd:w-[30%] rounded-xl mx-4">
         <img
           className="w-[100%] h-auto rounded-xl"
           src={poster_path ? secure_base_url + size + poster_path : image}
         />
       </div>
-      <div className="flex flex-col w-[60%]">
+      <div className="flex flex-col xd:w-[60%] text-center">
         <h1 className="text-white font-bold text-2xl my-4">{original_title || title}</h1>
         <p className="font-serif text-slate-400 text-xl mb-4">{tagline}</p>
         <div className="genres mb-4 mt-3">

@@ -21,9 +21,9 @@ const Casts = ({ casts }) => {
                   ? secure_base_url + size + item.profile_path
                   : pfp
               }
-              className="rounded-full w-[150px] h-[150px]"
+              className="rounded-full w-[80px] h-[80px]"
             />
-            <h4 className="my-3 font-serif text-slate-400 text-xl mb-4">
+            <h4 className="my-3 font-serif text-slate-400 text-sm mb-4">
               {item.name}
             </h4>
           </div>

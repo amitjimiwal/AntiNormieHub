@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect,  useState } from "react";
 import { useNavigate } from "react-router-dom";
 import useFetch from "../../../hooks/useFetch";
 
@@ -11,6 +11,7 @@ const Banner = () => {
   const [backgroundImg, setBackgroundImg] = useState("");
   const [searchInput, setSearchInput] = useState("");
   const {data} =useFetch("/movie/upcoming");
+ 
   const handlebackgroundImage = () => {
     try{
       // get a random number to select random images for background
@@ -26,7 +27,16 @@ const Banner = () => {
   };
   useEffect(() => {
     handlebackgroundImage();
-  }, [data]);
+    const box=document.getElementById('inputbox')
+    box.addEventListener("keyup",(event)=>{
+      event.keyCode == 13 && handleSearch()
+    });
+    return ()=>{
+      box.removeEventListener("keyup",(event)=>{
+        event.keyCode == 13 && handleSearch()
+      });
+    }
+  }, []);
   // handle searchbutton
   const handleSearch = () => {
     if (searchInput) {
@@ -50,7 +60,7 @@ const Banner = () => {
           <p className="text-white font-bold tracking-wide xd:text-3xl mb-8 xsm:text-1xl">
             Millions of movies,tvshows for anti-normie commmunity.
           </p>
-          <div className="border-2 border-solid border-white w-[80%] rounded-2xl outline-none   object-contain relative m-auto overflow-hidden">
+          <div className="border-2 border-solid border-white w-[80%] rounded-2xl outline-none   object-contain relative m-auto overflow-hidden" id="inputbox">
             <input
               type="text"
               placeholder="Search"

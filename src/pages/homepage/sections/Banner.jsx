@@ -40,6 +40,13 @@ const Banner = () => {
   const handleSearchQuery = (e) => {
     setSearchInput(e.target.value);
   };
+
+  // handle the search on pressing the enter button
+  const handleKeyPress=(e)=>{
+    if(e.key=='Enter'){
+          handleSearch()
+    }
+  }
   return (
     <div className=" banner-section w-full h-[270px] rs:h=[700px] relative xsm:text-xl  bg-black ">
       {backgroundImg && (
@@ -57,6 +64,7 @@ const Banner = () => {
               className="outline-none bg-black p-2 bg-opacity-0 placeholder:text-slate-400 text-white placeholder:text-xl w-[80%]"
               onChange={handleSearchQuery}
               value={searchInput}
+              onKeyDown={handleKeyPress}
             />
             <button
               className=" w-[18%] text-red-400 object-contain xsm:text-[1rem] p-1 h-[46px]"

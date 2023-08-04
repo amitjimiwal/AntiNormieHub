@@ -1,11 +1,11 @@
 # AntiNormieHub - PWA Movie Website
 
-![ShareMSG Logo](https://res.cloudinary.com/dejzy9q65/image/upload/v1690126475/antinnormie_l6yikw.jpg)
+![AntiNormieHub Logo](https://res.cloudinary.com/dejzy9q65/image/upload/v1690126475/antinnormie_l6yikw.jpg)
 
 Tech Stack -  `React` `Redux` `Redux-Toolkit`
 ## Installation
 
-To run ShareMSG locally or contribute to its development, follow these steps:
+To run AntiNormieHub locally or contribute to its development, follow these steps:
 
 1. Clone the repository to your local machine:
 
@@ -31,7 +31,7 @@ npm install
 npm start
 ```
 
-5. Open your web browser and navigate to http://localhost:3000 to access ShareMSG.
+5. Open your web browser and navigate to http://localhost:3000 to access AntiNormieHub.
 
 ### Contributing
 
@@ -65,7 +65,7 @@ We appreciate your contributions, and together, we can make this Project even be
 
 ## License
 
-ShareMSG is an open-source project licensed under the [MIT License](LICENSE). You can use, modify, and distribute the code under the terms of this license.
+AntiNormieHub is an open-source project licensed under the [MIT License](LICENSE). You can use, modify, and distribute the code under the terms of this license.
 
 ## Contact
 
